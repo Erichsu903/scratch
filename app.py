@@ -17,8 +17,7 @@ def main():
 def handler():
     try:
         get = request.args.get('endpoint')
-        offset = request.args.get('offset')
-        url = f"https://api.scratch.mit.edu{get}&offset={offset}"
+        url = f"https://api.scratch.mit.edu{get}"
 
         json = requests.get(url)
         json = json.json()
